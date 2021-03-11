@@ -1,0 +1,46 @@
+<%
+=begin%>
+ <% @users.each do |user|%>
+  <div class='conrainer'>
+    <div>
+      <%= user.firstname%>
+      <%= user.lastname%>
+      <%= user.email%>
+    </div>
+  </div>
+<% end %> 
+<%
+=end%>
+<p id="notice"><%= notice %></p>
+
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |friend| %>
+      <tr>
+        <td><%= friend.username %></td>
+        <td><%= friend.email %></td>
+        <%
+=begin%>
+ <td><%= link_to 'Show', friend %></td>
+        <td><%= link_to 'Edit', edit_friend_path(friend) %></td>
+        <td><%= link_to 'Destroy', friend, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
+<%
+=end%>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

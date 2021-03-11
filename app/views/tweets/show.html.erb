@@ -1,0 +1,12 @@
+<div class='col-6 mx-auto bg-light p-3'>
+  <p>
+    <strong>Tweet:</strong>
+    <%= @tweet.tweet %>
+  </p>
+  <% if user_signed_in? %>
+    <%= link_to 'Edit', edit_tweet_path(@tweet),class:'btn btn-info btn-sm' %> 
+    <%= link_to 'Back', tweets_path,class:'btn btn-secondary btn-sm' %>
+  <% else %>
+    <%= link_to 'Back', tweets_path,class:'btn btn-secondary btn-sm' %>
+  <% end %>
+</div>

@@ -1,0 +1,30 @@
+<%= csrf_meta_tags %>
+<nav class="navbar navbar-expand-lg navbar-light bg-info">
+  <div class="container-fluid">
+    <%= link_to 'Tweets', tweets_path, class: 'text-decoration-none link-dark fw-bolder mx-3' %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-3">
+        <% if user_signed_in? %>
+          <li class="nav-item mx-3">
+            <%= link_to 'Sign out', destroy_user_session_path, method: :delete,class: 'text-decoration-none link-dark' %>
+          </li>
+
+            <li class="nav-item mx-3">
+            <%= link_to 'Edit profile', edit_user_registration_path, class: 'text-decoration-none link-dark' %>
+          </li>
+        <% else%>
+          <li class="nav-item mx-3">
+            <%= link_to 'Sign up',new_user_registration_path, class: 'text-decoration-none link-dark' %>
+          </li>
+          <li class="nav-item mx-3">
+            <%= link_to 'Sign in',new_user_session_path, class: 'text-decoration-none link-dark' %>
+          </li>
+        <% end %>
+
+      </ul>
+    </div>
+  </div>
+</nav>
