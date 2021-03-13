@@ -6,7 +6,10 @@
   <div class='col-6 mx-auto text-center bg-light p-2'>
     
     <% if user_signed_in? %>
-      <%= tweet.tweet%> <br/>
+      <div class='d-flex flex-row justify-content-around'>
+        Author: <%= tweet.user.username %><br/>
+        <%= tweet.tweet%> <br/>
+      </div>
       <%= link_to 'Show', tweet, class:'btn btn-info text-white btn-sm' %>
       <%= link_to 'Edit', edit_tweet_path(tweet), class:'btn btn-info text-white btn-sm' %>
       <%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger text-white btn-sm' %>
