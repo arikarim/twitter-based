@@ -1,7 +1,7 @@
 
 # University Directory website
 
-> This is  a twiiter like website that users can create a tweet, edit and destroy a tweet but they can not delete or update other peoples tweets which demonstrate the use of devise
+> This is a twitter-like website that users can create a tweet, edit, and destroy a tweet but they can not delete or update other people's tweets which demonstrates the use of devise. 
 
 <!-- ![screenshot](assets/screen.png) -->
 
